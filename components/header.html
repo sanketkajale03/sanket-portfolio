@@ -1,35 +1,46 @@
 
 <header class="site-header">
 
-    <a href="/" class="logo">
-        Sanket<span>.</span>
-    </a>
+    <div class="header-inner">
 
-    <nav class="main-navigation" aria-label="Main navigation">
+        <a href="./index.html" class="logo">
+            Sanket<span>.</span>
+        </a>
 
-        <a href="/" class="nav-link">Home</a>
+        <button
+            class="mobile-menu-button"
+            id="mobile-menu-button"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+            ☰
+        </button>
 
-        <a href="/pages/about.html" class="nav-link">About</a>
+        <nav class="main-navigation" id="main-navigation">
 
-        <a href="/pages/resume.html" class="nav-link">Resume</a>
+            <a href="./index.html">Home</a>
+            <a href="./pages/about.html">About</a>
+            <a href="./pages/resume.html">Resume</a>
+            <a href="./pages/skills.html">Skills</a>
+            <a href="./pages/projects.html">Projects</a>
+            <a href="./pages/certifications.html">Certifications</a>
+            <a href="./pages/contact.html">Contact</a>
 
-        <a href="/pages/skills.html" class="nav-link">Skills</a>
+        </nav>
 
-        <a href="/pages/projects.html" class="nav-link">Projects</a>
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to light theme"
+            aria-pressed="false"
+        >
+            <span id="theme-icon" aria-hidden="true">☀</span>
+            <span id="theme-label">Light</span>
+        </button>
 
-        <a href="/pages/certifications.html" class="nav-link">Certifications</a>
-
-        <a href="/pages/contact.html" class="nav-link">Contact</a>
-
-    </nav>
-
-    <button
-        id="theme-toggle"
-        type="button"
-        aria-label="Switch color theme"
-        aria-pressed="false"
-    >
-        Switch Theme
-    </button>
+    </div>
 
 </header>

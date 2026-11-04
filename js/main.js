@@ -1,41 +1,60 @@
 
 /**
  * Main Application Entry Point
- *
- * Coordinates shared components and common functionality.
  */
 
 import { loadComponent } from "./components.js";
 
+import { initializeTheme } from "./theme.js";
+
+import { initializeNavigation } from "./navigation.js";
+
 /**
- * Initialize the website.
+ * Initialize the homepage.
  */
 async function initializeWebsite() {
 
-    // Load reusable website components.
+    // Load shared components.
     await Promise.all([
-        loadComponent("#header-container", "./components/header.html"),
-        loadComponent("#sidebar-container", "./components/sidebar.html"),
-        loadComponent("#footer-container", "./components/footer.html")
+
+        loadComponent(
+            "#header-container",
+            "./components/header.html"
+        ),
+
+        loadComponent(
+            "#footer-container",
+            "./components/footer.html"
+        )
+
     ]);
 
-    // Initialize common website features.
+    // Initialize interactive features after loading components.
+    initializeTheme();
+
+    initializeNavigation();
+
     initializeCurrentYear();
 
 }
 
 /**
- * Display the current year in the footer.
+ * Update footer year.
  */
 function initializeCurrentYear() {
 
     const yearElement = document.querySelector("#current-year");
 
     if (yearElement) {
+
         yearElement.textContent = new Date().getFullYear();
+
     }
 
 }
 
-// Start the application after the DOM is ready.
-document.addEventListener("DOMContentLoaded", initializeWebsite);
+// Start application.
+document.addEventListener(
+    "DOMContentLoaded",
+    initializeWebsite
+);

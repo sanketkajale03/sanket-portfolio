@@ -1,22 +1,24 @@
 
 /* Dark theme */
 
-body {
-    background-color: #111827;
-    color: #f9fafb;
-}
+[data-theme="dark"] {
 
-.site-header,
-.sidebar,
-.site-footer {
-    background-color: #1f2937;
-}
+    color-scheme: dark;
 
-a {
-    color: #93c5fd;
-}
+    --bg-primary: #0b1120;
+    --bg-secondary: #111b2e;
+    --bg-card: #162238;
 
-.primary-button {
-    background-color: #2563eb;
-    color: white;
+    --text-primary: #f1f5f9;
+    --text-secondary: #9caec4;
+
+    --accent: #60a5fa;
+    --accent-hover: #3b82f6;
+
+    --border-color: #293950;
+
+    --header-bg: rgba(11, 17, 32, 0.92);
+
+    --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.2);
+
 }

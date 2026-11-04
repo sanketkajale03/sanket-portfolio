@@ -1,22 +1,119 @@
 
-/* Responsive layout */
+/* Tablet */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
-    .layout-container {
-        grid-template-columns: 1fr;
-    }
-
-    .site-header {
-        flex-direction: column;
+    .header-inner {
+        gap: 15px;
     }
 
     .main-navigation {
-        justify-content: center;
+        gap: 12px;
     }
 
-    .hero-section h1 {
-        font-size: 32px;
+    .main-navigation a {
+        font-size: 11px;
+    }
+
+    .hero {
+        gap: 35px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+    .header-inner {
+        min-height: 70px;
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    .theme-toggle {
+        padding: 8px 11px;
+    }
+
+    .main-navigation {
+        display: none;
+        order: 4;
+        width: 100%;
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .main-navigation.active {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-block: 65px;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-profile {
+        justify-content: flex-start;
+    }
+
+    .profile-card {
+        max-width: 100%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2,
+    .contact-section h2 {
+        font-size: 29px;
+    }
+
+    .contact-section {
+        padding: 50px 20px;
+    }
+
+}
+
+/* Small mobile */
+
+@media (max-width: 420px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
     }
 
 }

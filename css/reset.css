@@ -1,7 +1,9 @@
 
-/* Reset default browser styles */
+/* Browser reset */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,8 +15,22 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -22,11 +38,9 @@ a {
 }
 
 button {
-    font: inherit;
     cursor: pointer;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+ul {
+    list-style: none;
 }

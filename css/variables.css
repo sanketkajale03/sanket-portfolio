@@ -1,16 +1,20 @@
 
-/* Shared design variables */
+/* Shared design tokens */
 
 :root {
-    --font-primary: Arial, sans-serif;
 
-    --container-width: 1200px;
+    --font-primary: "Inter", "Segoe UI", Arial, sans-serif;
 
-    --spacing-small: 10px;
-    --spacing-medium: 20px;
-    --spacing-large: 40px;
+    --container-width: 1180px;
 
-    --border-radius: 12px;
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 22px;
 
-    --transition-default: 0.3s ease;
+    --spacing-small: 12px;
+    --spacing-medium: 24px;
+    --spacing-large: 48px;
+
+    --transition-default: 0.25s ease;
+
 }
