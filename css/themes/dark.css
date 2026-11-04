@@ -1,0 +1,22 @@
+
+/* Dark theme */
+
+body {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.site-header,
+.sidebar,
+.site-footer {
+    background-color: #1f2937;
+}
+
+a {
+    color: #93c5fd;
+}
+
+.primary-button {
+    background-color: #2563eb;
+    color: white;
+}

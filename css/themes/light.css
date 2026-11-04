@@ -1,0 +1,22 @@
+
+/* Light theme */
+
+body {
+    background-color: #f8fafc;
+    color: #111827;
+}
+
+.site-header,
+.sidebar,
+.site-footer {
+    background-color: #ffffff;
+}
+
+a {
+    color: #1d4ed8;
+}
+
+.primary-button {
+    background-color: #2563eb;
+    color: white;
+}

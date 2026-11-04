@@ -1,0 +1,16 @@
+
+/* Shared design variables */
+
+:root {
+    --font-primary: Arial, sans-serif;
+
+    --container-width: 1200px;
+
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+
+    --border-radius: 12px;
+
+    --transition-default: 0.3s ease;
+}

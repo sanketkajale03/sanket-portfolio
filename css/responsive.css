@@ -1,0 +1,22 @@
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+
+    .layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header {
+        flex-direction: column;
+    }
+
+    .main-navigation {
+        justify-content: center;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+}
