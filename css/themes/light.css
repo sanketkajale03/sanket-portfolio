@@ -1,24 +1,36 @@
 
-/* Light theme */
+/* =========================================
+   PEARL GLASS — LIGHT THEME
+========================================= */
 
 [data-theme="light"] {
 
     color-scheme: light;
 
-    --bg-primary: #f8fafc;
-    --bg-secondary: #ffffff;
-    --bg-card: #ffffff;
+    --bg-primary: #F5F6FC;
+    --bg-secondary: #FFFFFF;
 
-    --text-primary: #172033;
-    --text-secondary: #64748b;
+    /* Glass surfaces */
+    --bg-card: rgba(255, 255, 255, 0.70);
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(115, 94, 210, 0.16);
 
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
+    --text-primary: #171B38;
+    --text-secondary: #69718D;
 
-    --border-color: #e2e8f0;
+    --accent: #7045C5;
+    --accent-hover: #5633A5;
 
-    --header-bg: rgba(248, 250, 252, 0.92);
+    --royal-blue: #315FEA;
+    --royal-purple: #8154D9;
+    --royal-gold: #B58B43;
 
-    --shadow-card: 0 15px 40px rgba(15, 23, 42, 0.06);
+    --border-color: rgba(105, 93, 170, 0.15);
 
+    --header-bg: rgba(255, 255, 255, 0.78);
+
+    --shadow-card:
+        0 18px 45px rgba(50, 44, 110, 0.09);
+
+    --glass-blur: 18px;
 }

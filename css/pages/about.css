@@ -1,0 +1,96 @@
+
+.about-page {
+    padding-block: 65px;
+}
+
+.about-hero {
+    padding: 55px;
+    margin-bottom: 28px;
+}
+
+.about-hero h1 {
+    font-size: clamp(40px, 6vw, 60px);
+    margin-bottom: 20px;
+}
+
+.about-hero h1 span {
+    color: var(--royal-gold);
+}
+
+.about-hero > p:last-child {
+    max-width: 750px;
+    color: var(--text-secondary);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.about-card {
+    padding: 35px;
+}
+
+.about-card h2 {
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.about-card p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.about-values {
+    padding: 35px;
+    margin-top: 28px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.values-grid span {
+    color: var(--royal-gold);
+    font-weight: 800;
+}
+
+.values-grid h3 {
+    margin: 10px 0;
+}
+
+.values-grid p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.about-cta {
+    text-align: center;
+    padding-block: 70px;
+}
+
+.about-cta p {
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.about-cta .btn {
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    .about-hero,
+    .about-card,
+    .about-values {
+        padding: 25px;
+    }
+
+    .about-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

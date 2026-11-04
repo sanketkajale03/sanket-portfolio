@@ -1,24 +1,36 @@
 
-/* Dark theme */
+/* =========================================
+   ROYAL GLASS — DARK THEME
+========================================= */
 
 [data-theme="dark"] {
 
     color-scheme: dark;
 
-    --bg-primary: #0b1120;
-    --bg-secondary: #111b2e;
-    --bg-card: #162238;
+    --bg-primary: #080D1C;
+    --bg-secondary: #10182D;
 
-    --text-primary: #f1f5f9;
-    --text-secondary: #9caec4;
+    /* Glass surfaces */
+    --bg-card: rgba(28, 39, 69, 0.58);
+    --glass-bg: rgba(255, 255, 255, 0.055);
+    --glass-border: rgba(164, 145, 255, 0.20);
 
-    --accent: #60a5fa;
-    --accent-hover: #3b82f6;
+    --text-primary: #F5F3FF;
+    --text-secondary: #AAB4CE;
 
-    --border-color: #293950;
+    --accent: #9B7AFF;
+    --accent-hover: #B49AFF;
 
-    --header-bg: rgba(11, 17, 32, 0.92);
+    --royal-blue: #5278F5;
+    --royal-purple: #8655D9;
+    --royal-gold: #D7B56D;
 
-    --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.2);
+    --border-color: rgba(165, 180, 252, 0.16);
 
+    --header-bg: rgba(8, 13, 28, 0.76);
+
+    --shadow-card:
+        0 18px 50px rgba(0, 0, 0, 0.30);
+
+    --glass-blur: 18px;
 }

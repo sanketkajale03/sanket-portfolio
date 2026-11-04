@@ -1,0 +1,148 @@
+
+/* =========================================
+   REUSABLE GLASSMORPHISM COMPONENTS
+========================================= */
+
+.glass-card {
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.glass-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 20px 45px rgba(90, 75, 180, 0.14);
+
+}
+
+/* Glass buttons */
+
+.glass-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: 12px;
+
+    background: var(--glass-bg);
+
+    color: var(--text-primary);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: all 0.3s ease;
+
+}
+
+.glass-button:hover {
+
+    border-color: var(--accent);
+
+    color: var(--accent);
+
+    transform: translateY(-3px);
+
+}
+
+/* Glass section backgrounds */
+
+.glass-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(120, 90, 220, 0.08),
+            transparent 55%
+        );
+
+    border-radius: 24px;
+
+}
+
+/* Gold accent */
+
+.gold-accent {
+
+    color: var(--royal-gold);
+
+}
+
+/* Decorative background glow */
+
+.glass-glow {
+
+    position: relative;
+
+    isolation: isolate;
+
+}
+
+.glass-glow::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+
+    height: 240px;
+
+    top: -50px;
+
+    right: -50px;
+
+    background: var(--royal-purple);
+
+    filter: blur(120px);
+
+    opacity: 0.12;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+}
+
+/* Fallback for browsers without backdrop-filter */
+
+@supports not (backdrop-filter: blur(1px)) {
+
+    .glass-card,
+    .glass-button {
+
+        background: var(--bg-card);
+
+    }
+
+}

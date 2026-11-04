@@ -1,43 +1,35 @@
 
 /**
- * Shared Component Loader
- *
- * Loads reusable HTML components into the website.
- * Uses fetch() to retrieve component templates.
+ * Reusable HTML component loader.
  */
 
-/**
- * Loads an HTML component into a target element.
- *
- * @param {string} selector - Target element selector.
- * @param {string} componentPath - Component file path.
- */
+import { sitePath } from "./paths.js";
+
 export async function loadComponent(selector, componentPath) {
 
     const container = document.querySelector(selector);
 
     if (!container) {
-        console.error(`Component container not found: ${selector}`);
+        console.warn(`Container not found: ${selector}`);
         return;
     }
 
     try {
 
-        const response = await fetch(componentPath);
+        const response = await fetch(sitePath(componentPath));
 
         if (!response.ok) {
-            throw new Error(
-                `Unable to load ${componentPath}: ${response.status}`
-            );
+            throw new Error(`HTTP ${response.status}`);
         }
 
         const html = await response.text();
 
+        // Only trusted local templates belong in this loader.
         container.innerHTML = html;
 
     } catch (error) {
 
-        console.error("Component loading error:", error);
+        console.error("Component loading failed:", error);
 
     }
 

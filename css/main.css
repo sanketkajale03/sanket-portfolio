@@ -801,3 +801,76 @@ button:focus-visible {
     }
 
 }
+
+/* =========================================
+   PHASE 4 — HOMEPAGE GLASS UPGRADE
+========================================= */
+
+.site-header {
+
+    background: var(--header-bg);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+}
+
+.profile-card,
+.info-card,
+.project-card {
+
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+
+    box-shadow: var(--shadow-card);
+
+}
+
+.profile-card:hover,
+.info-card:hover,
+.project-card:hover {
+
+    border-color: var(--accent);
+
+}
+
+.hero h1 span {
+
+    background: linear-gradient(
+        100deg,
+        var(--royal-purple),
+        var(--royal-blue),
+        var(--royal-gold)
+    );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+.btn-primary {
+
+    background: linear-gradient(
+        120deg,
+        var(--royal-purple),
+        var(--royal-blue)
+    );
+
+    border: none;
+
+}
+
+.btn-primary:hover {
+
+    box-shadow: 0 8px 25px rgba(112, 69, 197, 0.28);
+
+}

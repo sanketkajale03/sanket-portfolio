@@ -1,13 +1,23 @@
 
 /**
- * Navigation Controller
- *
- * Controls the responsive mobile navigation menu.
+ * Responsive navigation controller.
  */
+
+import { sitePath } from "./paths.js";
 
 export function initializeNavigation() {
 
+    // Resolve shared navigation links.
+    document.querySelectorAll("[data-route]").forEach((link) => {
+
+        const route = link.dataset.route;
+
+        link.href = sitePath(route);
+
+    });
+
     const menuButton = document.querySelector("#mobile-menu-button");
+
     const navigation = document.querySelector("#main-navigation");
 
     if (!menuButton || !navigation) {
@@ -16,17 +26,17 @@ export function initializeNavigation() {
 
     menuButton.addEventListener("click", () => {
 
-        const isExpanded =
+        const isOpen =
             menuButton.getAttribute("aria-expanded") === "true";
 
-        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+
+        navigation.classList.toggle("active");
 
         menuButton.setAttribute(
             "aria-label",
-            isExpanded ? "Open navigation" : "Close navigation"
+            isOpen ? "Open navigation" : "Close navigation"
         );
-
-        navigation.classList.toggle("active");
 
     });
 
@@ -37,8 +47,6 @@ export function initializeNavigation() {
             navigation.classList.remove("active");
 
             menuButton.setAttribute("aria-expanded", "false");
-
-            menuButton.setAttribute("aria-label", "Open navigation");
 
         });
 
